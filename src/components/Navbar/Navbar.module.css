@@ -1,0 +1,17 @@
+.nav {
+    /* justify-content: space-between; 
+    align-items:flex-start; */
+    color: rgb(45, 52, 47);
+    padding: 4px 20px;
+    box-shadow: 0px 1px 2px gray;
+    display: flex;
+    background: rgb(225, 204, 121); /*color später veränden */
+  
+  }
+
+.logo{
+  height: 100px;
+  /* padding-bottom: 10px;
+  padding-top: 5px;
+  padding-left: 20px; */
+}

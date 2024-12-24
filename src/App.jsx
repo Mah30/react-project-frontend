@@ -3,6 +3,7 @@ import React from 'react';
 import { useState } from 'react';
 
 
+
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
 import Footer from './components/Footer/Footer';
@@ -17,10 +18,27 @@ function App() {
   
 
   return (
+
     <div className= "App">
-      <h1>Hallo</h1>
-      <Navbar/>
-      <Navbar/>
+     
+     <Navbar/>
+        <div>
+          
+
+        {/*   <Routes> 
+            <Route path = "/" element = {<TaskBoard tasks={tasks} setTasks={setTasks} />} />
+            <Route path = "/item/:id" element = {<ItemDetails tasks={tasks} setTasks={setTasks} />} />
+            <Route path = "/about" element = {<AboutPage/>} />
+            <Route path = "/dashboard" element = {<Dashboard tasks={tasks} setTasks={setTasks} />} />
+            <Route path = "*" element = {<NotFoundPage/>}/>
+          </Routes>
+        */}
+        </div>
+
+        <Footer/>
+
+  
+     
     </div>
   )
   
