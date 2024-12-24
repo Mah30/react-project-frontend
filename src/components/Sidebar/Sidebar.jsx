@@ -24,21 +24,8 @@ import MailIcon from '@mui/icons-material/Mail';
 
 //AnchorTemporaryDrawer
 
-function Sidebar() {
-  const [state, setState] = React.useState({
-    top: false,
-    left: false,
-    bottom: false,
-    right: false,
-  });
-
-  const toggleDrawer = (anchor, open) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return;
-    }
-
-    setState({ ...state, [anchor]: open });
-  };
+function Sidebar({state, setState, toggleDrawer}) {
+  
 
   const list = (anchor) => (
     <Box
@@ -48,7 +35,7 @@ function Sidebar() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+        {['Inbox', 'Starred', 'Send email', 'Drafts', 'Drafts'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -59,9 +46,11 @@ function Sidebar() {
           </ListItem>
         ))}
       </List>
-      <Divider />
+
+      <Divider /> {/* Adiciona uma linha divisória entre as listas. */}
+
       <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+        {['All mail', /* 'Trash', 'Spam' */].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -79,7 +68,7 @@ function Sidebar() {
     <div>
       {['left'].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+          {/* <Button>{anchor}</Button> */}
           <Drawer
             anchor={anchor}
             open={state[anchor]}

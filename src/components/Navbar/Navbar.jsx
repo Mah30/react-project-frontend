@@ -17,6 +17,20 @@ import Sidebar from '../Sidebar/Sidebar';
 /* import Sidebar from './components/Sidebar/Sidebar'; */
 
 function Navbar() {
+  const [state, setState] = React.useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
   return (
 
 
@@ -28,18 +42,24 @@ function Navbar() {
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={{ mr: 2 }}
+            /* sx={{ mr: 1 }} */
+            onClick={toggleDrawer('left', true)}
           >
             <MenuIcon />
             </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}> {/* Permite que o Typography ocupe o espaço restante, empurrando outros elementos para as extremidades.  */}
+            
             News
+
           </Typography>
 
           <Button color="inherit">Login</Button>
+          <Button color="inherit">Register</Button>
+          
         </Toolbar>
       </AppBar>
-      <Sidebar></Sidebar>
+      
+      <Sidebar state = {state} setState = {setState} toggleDrawer = {toggleDrawer}></Sidebar>
     </Box>
   );
 }
