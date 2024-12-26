@@ -1,18 +1,25 @@
 import React from 'react';
-
+import './App.css'
 import { useState } from 'react';
-
-
-
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
 import Footer from './components/Footer/Footer';
-import './App.css'
+import HomePage from './pages/HomePage/HomePage';
+import NotFoundPage from './pages/NotFoundPage';
+import AboutPage from './pages/AboutPage/AboutPage';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+/* import AboutPage from './pages/AboutPage'; */
+
+
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+
+
 
 function App() {
   
@@ -21,8 +28,19 @@ function App() {
 
     <div className= "App">
      
-     <Navbar/>
-        <div>
+    <Router>
+      <Navbar/>
+
+      <Routes>
+        <Route path='/homepage' element = {<HomePage/>} />
+        {/* <Route path="*" element={<NotFoundPage />} /> */} {/* Fazer aparecer depois, já está "pronta" */}
+
+        <Route path = '/aboutpage' element = {<AboutPage/>} />
+
+      
+
+      </Routes>  
+
           
 
         {/*   <Routes> 
@@ -33,9 +51,11 @@ function App() {
             <Route path = "*" element = {<NotFoundPage/>}/>
           </Routes>
         */}
-        </div>
+       
 
-        <Footer/>
+      <Footer/>
+
+    </Router>  
 
   
      

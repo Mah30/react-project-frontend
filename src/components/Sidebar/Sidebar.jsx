@@ -35,7 +35,7 @@ function Sidebar({state, setState, toggleDrawer}) {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts', 'Drafts'].map((text, index) => (
+        {['Home', 'About', 'Courses', 'New Courses', ].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -50,7 +50,7 @@ function Sidebar({state, setState, toggleDrawer}) {
       <Divider /> {/* Adiciona uma linha divisória entre as listas. */}
 
       <List>
-        {['All mail', /* 'Trash', 'Spam' */].map((text, index) => (
+        {['Service', 'Talk to us',  /* 'Trash', 'Spam' */].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
