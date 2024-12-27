@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import notFoundImage from '../assets/img/notFoundImage.jpg';
+import notFoundImage from '../assets/images/notFoundImage.jpg';
 
 
 

@@ -37,7 +37,7 @@ function Sidebar({state, setState, toggleDrawer}) {
       <List>
         {['Home', 'About', 'Courses', 'New Courses', ].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
+            <ListItemButton /* href={'/${text.toLowerCase()}'} */>
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>

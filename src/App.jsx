@@ -32,6 +32,7 @@ function App() {
       <Navbar/>
 
       <Routes>
+        <Route path='/' element = {<HomePage/>} />
         <Route path='/homepage' element = {<HomePage/>} />
         {/* <Route path="*" element={<NotFoundPage />} /> */} {/* Fazer aparecer depois, já está "pronta" */}
 
