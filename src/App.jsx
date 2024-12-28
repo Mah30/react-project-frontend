@@ -1,4 +1,5 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css'
 import { useState } from 'react';
 import Navbar from './components/Navbar/Navbar';
@@ -7,12 +8,6 @@ import Footer from './components/Footer/Footer';
 import HomePage from './pages/HomePage/HomePage';
 import NotFoundPage from './pages/NotFoundPage';
 import AboutPage from './pages/AboutPage/AboutPage';
-
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-/* import AboutPage from './pages/AboutPage'; */
-
-
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -26,38 +21,24 @@ function App() {
 
   return (
 
-    <div className= "App">
-     
-    <Router>
-      <Navbar/>
+    <div className= {"styles.container"}>
 
-      <Routes>
-        <Route path='/' element = {<HomePage/>} />
-        <Route path='/homepage' element = {<HomePage/>} />
+      <Navbar />
+
+
+      <main className={"styles.main"}>  
+        <Routes>
+          <Route path='/' element = {<HomePage/>} />
+          {/* <Route path='/homepage' element = {<HomePage/>} /> */}
         {/* <Route path="*" element={<NotFoundPage />} /> */} {/* Fazer aparecer depois, já está "pronta" */}
 
-        <Route path = '/aboutpage' element = {<AboutPage/>} />
+          <Route path = '/aboutpage' element = {<AboutPage/>} />
 
-      
+        </Routes>  
+      </main>
 
-      </Routes>  
-
-          
-
-        {/*   <Routes> 
-            <Route path = "/" element = {<TaskBoard tasks={tasks} setTasks={setTasks} />} />
-            <Route path = "/item/:id" element = {<ItemDetails tasks={tasks} setTasks={setTasks} />} />
-            <Route path = "/about" element = {<AboutPage/>} />
-            <Route path = "/dashboard" element = {<Dashboard tasks={tasks} setTasks={setTasks} />} />
-            <Route path = "*" element = {<NotFoundPage/>}/>
-          </Routes>
-        */}
-       
 
       <Footer/>
-
-    </Router>  
-
   
      
     </div>
