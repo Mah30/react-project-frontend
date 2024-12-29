@@ -14,6 +14,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Sidebar from '../Sidebar/Sidebar';
+import { Link } from 'react-router-dom';
 /* import Sidebar from './components/Sidebar/Sidebar'; */
 
 function Navbar() {
@@ -42,19 +43,37 @@ function Navbar() {
             edge="start"
             color="inherit"
             aria-label="menu"
-            /* sx={{ mr: 1 }} */
+            sx={{ mr: 1 }}
             onClick={toggleDrawer('left', true)}
           >
             <MenuIcon />
             </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}> {/* Permite que o Typography ocupe o espaço restante, empurrando outros elementos para as extremidades.  */}
-            
-            News
-
+          
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}> {/* Permite que o Typography ocupe o espaço restante, empurrando outros elementos para as extremidades.  */}    
+            Online Courses
           </Typography>
 
-          <Button color="inherit">Login</Button>
-          <Button color="inherit">Register</Button>
+          <Box sx={{ display: 'flex', gap: 2 }}>
+          <Button color="inherit" component={Link} to="/home">
+            Home
+          </Button>
+          <Button color="inherit" component={Link} to="/about">
+            About
+          </Button>
+          <Button color="inherit" component={Link} to="/course-page">
+            Courses
+          </Button>
+          <Button color="inherit" component={Link} to="/new-courses">
+            New
+          </Button>
+          <Button color="inherit" component={Link} to="/talk-to-us">
+            Talk to us
+          </Button>
+          </Box>
+          
+
+          <Button color="inherit" component = {Link} to = "/">Login</Button>
+          <Button color="inherit" component = {Link} to = "/">Register</Button>
           
         </Toolbar>
       </AppBar>
