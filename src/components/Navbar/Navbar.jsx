@@ -54,26 +54,56 @@ function Navbar() {
           </Typography>
 
           <Box sx={{ display: 'flex', gap: 2 }}>
-          <Button color="inherit" component={Link} to="/home">
+          <Button 
+          color="inherit" 
+          component={Link} 
+          to="/homepage"
+          sx = {{textTransform: 'Capitalize'}}
+          >
             Home
           </Button>
-          <Button color="inherit" component={Link} to="/about">
+
+          <Button 
+          color="inherit" 
+          component={Link} 
+          to="/aboutpage"
+          sx = {{textTransform: 'Capitalize'}}
+          >
             About
           </Button>
-          <Button color="inherit" component={Link} to="/course-page">
+
+          <Button 
+          color="inherit" 
+          component={Link} 
+          to="/coursepage"
+          sx = {{textTransform: 'Capitalize'}}
+          >
             Courses
           </Button>
-          <Button color="inherit" component={Link} to="/new-courses">
+
+          <Button 
+          color="inherit" 
+          component={Link} 
+          to="/new"
+          sx = {{textTransform: 'Capitalize'}}
+          >
             New
           </Button>
-          <Button color="inherit" component={Link} to="/talk-to-us">
+          
+          <Button 
+          color="inherit" 
+          component={Link} 
+          to="/talktous"
+          sx = {{textTransform: 'Capitalize'}}
+          >
             Talk to us
           </Button>
+
           </Box>
           
 
-          <Button color="inherit" component = {Link} to = "/">Login</Button>
-          <Button color="inherit" component = {Link} to = "/">Register</Button>
+          <Button color="inherit" component = {Link} to = "/login">Login</Button>
+          <Button color="inherit" component = {Link} to = "/login/register">Register</Button>
           
         </Toolbar>
       </AppBar>
@@ -103,7 +133,7 @@ export default Navbar;
             <nav className={styles.nav} ref={navRef}>
 
                 <img className={styles.logo} src="./src/assets/img/logo.png"/>
-
+os botoes 
                 <h2>M'Art</h2>
 
                     <a href="/home">Home</a>
