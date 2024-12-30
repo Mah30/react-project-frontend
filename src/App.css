@@ -9,6 +9,28 @@ html, body {
   min-height: 100vh; /* Garante altura da viewport */
 }
 
+.containerStyle{
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  
+    
+    /* backgroundSize: cover; // Faz a imagem cobrir o contêiner
+    backgroundPosition: 'center' // Centraliza a imagem
+    backgroundRepeat: 'no-repeat', // Evita repetição
+    height: '100vh', // Ocupa 100% da altura da viewport
+    width: '100vw', // Ocupa 100% da largura da viewport
+    display: 'flex',
+    flexDirection: 'column', // Organiza os elementos verticalmente */
+  
+
+}
+
 /* Estiliza o conteúdo principal */
 .main {
   flex: 1; /* Faz o main crescer para ocupar o espaço restante */

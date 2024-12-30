@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import './App.css'
+import './App.css';
 import { useState } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
@@ -12,6 +12,8 @@ import CoursePage from './pages/CoursePage/CoursePage';
 import New from './pages/New/New';
 import TalkToUs from './pages/TalkToUs/TalkToUs';
 import Login from './pages/Login/Login';
+
+
 /* import { AppProvider } from '@toolpad/core/AppProvider';
 import { SignInPage } from '@toolpad/core/SignInPage';
 import { useTheme } from '@mui/material/styles'; */
@@ -27,12 +29,13 @@ import '@fontsource/roboto/700.css';
 
 
 function App() {
+
   
-
   return (
-
-    <div className= {"styles.container"}>
-
+  
+      
+    <div>
+     
       <Navbar />
 
 
@@ -56,6 +59,7 @@ function App() {
       <Footer/>
   
     </div>
+
   )
   
   

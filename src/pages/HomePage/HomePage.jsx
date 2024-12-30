@@ -3,6 +3,8 @@ import Carousel from 'react-material-ui-carousel';
 import img1 from '../../assets/images/img1.jpg';
 import img2 from '../../assets/images/img2.jpg';
 import img3 from '../../assets/images/img3.jpg';
+import img4 from '../../assets/images/img4.jpg';
+import img5 from '../../assets/images/img5.jpg';
 import SearchBar from '../SearchBar';
 import CoursePage from '../CoursePage/CoursePage';
 
@@ -42,6 +44,22 @@ const HomePage = () => {
                 ></div>
             <div style={{ 
                 backgroundImage: `url(${img3})`, 
+                backgroundSize: "cover", 
+                backgroundPosition: "center", 
+                height: "300px", 
+                width: "100vw" 
+                }}
+                ></div>
+            <div style={{ 
+                backgroundImage: `url(${img4})`, 
+                backgroundSize: "cover", 
+                backgroundPosition: "center", 
+                height: "300px", 
+                width: "100vw" 
+                }}
+                ></div>
+            <div style={{ 
+                backgroundImage: `url(${img5})`, 
                 backgroundSize: "cover", 
                 backgroundPosition: "center", 
                 height: "300px", 

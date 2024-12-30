@@ -10,7 +10,7 @@ const Footer = () => {
              
 
                 <p>Desenvolvido por Mariah.       Find this source on {""}
-                    <a href="https://github.com/Mah30/to-do-app" target='_blank'>
+                    <a href="https://github.com/Mah30/react-project-frontend" target='_blank'>
                     
                         GitHub! 
 
