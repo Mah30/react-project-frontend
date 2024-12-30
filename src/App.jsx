@@ -17,13 +17,10 @@ import { SignInPage } from '@toolpad/core/SignInPage';
 import { useTheme } from '@mui/material/styles'; */
 
 
-
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-
-
 
 
 
@@ -53,22 +50,14 @@ function App() {
 
         <Route path="*" element={<NotFoundPage />} /> 
 
-        
-
         </Routes>  
       </main>
 
-
       <Footer/>
   
-     
     </div>
   )
   
-  
-
-
-
   
 }
 

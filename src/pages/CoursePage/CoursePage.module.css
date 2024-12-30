@@ -1,0 +1,54 @@
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap; /* quebra de linha */
+    
+}
+
+/* Estilo dos cards */
+.card {
+    text-align: center;
+    max-width: 300px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-img {
+    width: 100%; /* Faz a imagem ocupar o máximo do card */
+    /* height: auto;  *//* Mantém a proporção da imagem */
+    border-radius: 8px;
+    object-fit: cover; /* Garante que a imagem seja bem exibida */
+  }
+  
+  .card p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Efeito ao passar o mouse */
+  .card:hover {
+    transform: translateY(-15px);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Alinha os cards verticalmente em telas pequenas */
+      align-items: center;
+    }
+  
+    .card {
+      max-width: 90%; /* Deixa o card mais largo em telas menores */
+    }
+  }
+
+
+
