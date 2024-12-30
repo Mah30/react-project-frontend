@@ -107,6 +107,8 @@ function Navbar() {
           
         </Toolbar>
       </AppBar>
+
+
       
       <Sidebar state = {state} setState = {setState} toggleDrawer = {toggleDrawer}></Sidebar>
     </Box>
