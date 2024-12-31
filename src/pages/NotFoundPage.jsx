@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import notFoundImage from '../assets/images/notFoundImage.jpg';
+import notFoundImage from '../assets/images/notFoundImage.png';
 import SearchBar from './SearchBar';
 
 
@@ -14,15 +14,18 @@ const NotFoundPage = () => {
             <SearchBar/>
         
             <div style={{ textAlign: "center", marginTop: "50px" }}>
-                <h2 style={{color: "#16425b"}}>404 Not Found</h2>
-                <p style={{color: "#16425b"}}>Sorry, the page you're looking for doesn't exist.</p>
+                <h1 style={{color: "#16425b"}}>404 Not Found</h1>
+                <h3 
+                style={{color: "#16425b"}}>Sorry, the page you're looking for doesn't exist.</h3>
+                
                 <img
                 src={notFoundImage}
                 alt='Image to not found page'
                 style = {{maxWidth: "100%", height: "auto", }}
-                
                 />
+
                 <Link to ="/" style = {{color:"blue", textDecoration: "underline"}}>Back to Home Page</Link>
+                
             </div>
         </>
      );
