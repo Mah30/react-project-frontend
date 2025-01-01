@@ -9,89 +9,91 @@ import modelagem from '../../assets/images/modelagem.jpg';
 import encadernacao from '../../assets/images/encadernacao.jpg';
 import colagem from '../../assets/images/colagem.jpg';
 
-import background3 from '../../assets/images/background3.jpg';
+import ContainerStyle from "../../components/ContainerStyle";
 
 
+import { useState } from "react";
 
 
-const CoursePage = () => {
-
-  const containerStyle = {
-    backgroundImage: `url(${background3})`, // Define a imagem de fundo
-    backgroundSize: 'cover', // Faz a imagem cobrir o contêiner
-    backgroundPosition: 'center', // Centraliza a imagem
-    backgroundRepeat: 'no-repeat', // Evita repetição
-    height: '100vh', // Ocupa 100% da altura da viewport
-    width: '100vw', // Ocupa 100% da largura da viewport
-    display: 'flex',
-    flexDirection: 'column', // Organiza os elementos verticalmente
-  };
-
+const CoursePage = ({isHomepage}) => {
 
   const courses = [
-    {img: pinturaOvo, 
-    text: "Cursos Online",
-    students: "260, 942",
+    { img: pinturaOvo, 
+    title: "Cursos Online",
+    description: "Aprenda as técnicas básicas de pintura em ovos decorativos.",
+    students: "260,942",
     rating: "99%",
     price: "$20",
-    oldPrice: "$60",
-
   },
-    {img: origumi, 
-    text: "Cursos Online", 
-  }, 
-    {img: costura, 
-    text: "Cursos Online", 
+    { img: encadernacao,
+    title: "Cursos Online",
+  },
+    { img: costura, 
+    title: "Cursos Online", 
   },
     { img: molduraQuadros,
-    text: "Cursos Online",
+    title: "Cursos Online",
   },
     { img: colagem,
-    text: "Cursos Online",
+    title: "Cursos Online",
   },
     { img: flores,
-    text: "Cursos Online",
+    title: "Cursos Online",
   },
-  { img: modelagem,
-    text: "Cursos Online",
+    { img: encadernacao,
+    title: "Cursos Online",
   },
-  { img: encadernacao,
-    text: "Cursos Online",
+    { img: encadernacao,
+    title: "Cursos Online",
+  },
+    { img: encadernacao,
+    title: "Cursos Online",
+  },
+    { img: encadernacao,
+    title: "Cursos Online",
+  },
+    { img: encadernacao,
+    title: "Cursos Online",
+  },
+    { img: encadernacao,
+    title: "Cursos Online",
   },
   ]
 
+  const coursesToDisplay = isHomepage ? courses.slice(0,4) : courses; 
+
 
   return (
-    <div style={containerStyle}>
-
-    
-      <section className= {styles.container}>
-        {courses.map((course, index) => (
+   
+      <section className= {isHomepage ? styles.containerSmall : styles.container}>
+        {coursesToDisplay.map((course, index) => (
 
           <div className= {styles.card} key={index}>
-            <div>
               <img 
                 className= {styles["card-img"]} 
                 src={course.img} 
-                alt={course.text} />
-            </div>
+                alt={course.title} />  
 
-            <div>
-              <h3></h3>
-              <p>{course.text}</p>
               <div>
-                <span></span>
-                <span></span>
-              </div>
-              <div>
-                <span></span>
-                <span></span>
+                <h3 
+                className={styles.cardTitle}>{course.title}
+                </h3>
+                <span
+                className={styles.cardDescription}>{course.description}
+                </span>
+                <div className={styles.cardStatus}>
+                  <span>{course.students} students</span>
+                  <span>{course.rating} de avaliacao</span>
+                </div>
+
+              <div className={styles.cardPricing}>
+                <span className={styles.cardPrice}>{course.price}</span>
               </div>
             </div> 
           </div>
         ))}
       </section>
-    </div>
+    
   );
 };
 

@@ -3,6 +3,8 @@ import background4 from '../../assets/images/background4.jpg';
 import mulherprogramandoF from '../../assets/images/mulherprogramandoF.png';
 import SearchBar from '../SearchBar';
 
+
+
 const AboutPage = () => {
 
     const containerStyle = {
@@ -19,21 +21,25 @@ const AboutPage = () => {
 
     return ( 
 
-      
 
         <div style={containerStyle}>
 
             <SearchBar/>
+            
 
             <h2>About this Project</h2>
             <p>This is a Webpage Project created with React for learning practice </p>
             <p>Created from: Mariah</p>
+
+            
 
             <img src={mulherprogramandoF} alt="woman programming" />
 
             <a href="https://github.com/Mah30" target='_blank'>GitHub</a>
             <a href="https://www.linkedin.com/in/alinemariah-webdesigner/" target='_blank'>Linkedin</a>
         </div>
+
+
      );
 }
  

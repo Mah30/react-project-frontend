@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../HomePage/HomePage.module.css';
 import Carousel from 'react-material-ui-carousel';
 import img1 from '../../assets/images/img1.jpg';
 import img2 from '../../assets/images/img2.jpg';
@@ -7,6 +8,7 @@ import img4 from '../../assets/images/img4.jpg';
 import img5 from '../../assets/images/img5.jpg';
 import SearchBar from '../SearchBar';
 import CoursePage from '../CoursePage/CoursePage';
+import Space from '../../components/Space';
 
 
 /* import TextField from '@mui/material/TextField';
@@ -18,7 +20,7 @@ import { useNavigate } from 'react-router-dom'; */
 
 
 const HomePage = () => {
-  
+
     return ( 
         
         <div>
@@ -68,9 +70,13 @@ const HomePage = () => {
                 ></div>
             </Carousel> 
 
+            <Space />
+
             <h1>A melhor Plataforma de Cursos Online, para voce! </h1>
 
-            <CoursePage/>
+            <Space />
+
+            <CoursePage isHomepage={true} />
           
         </div>
         
