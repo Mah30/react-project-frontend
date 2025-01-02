@@ -12,7 +12,9 @@ import Space from '../../components/Space';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { borderRadius } from '@mui/system';
-
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import { Link } from 'react-router-dom';
 
 /* import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
@@ -33,9 +35,9 @@ const HomePage = () => {
             <Carousel
              NextIcon = {<ChevronRightIcon />}
              PrevIcon = {<ChevronLeftIcon />}
-             /* indicators={false} */ // Remove os indicadores abaixo do carrossel
-            navButtonsAlwaysVisible // Opcional: Torna os botões de navegação sempre visíveis
-            animation="slide" // Controla a animação (slide
+             /* indicators={false} */ 
+            navButtonsAlwaysVisible 
+            animation="slide" 
             navButtonsProps={{
                 style: {
                     backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -47,12 +49,12 @@ const HomePage = () => {
             navButtonsWrapperProps={{
                 style: {
                 position: 'absolute',
-                bottom: '-10px', // Move os botões para a parte inferior da imagem
-                left: '50%' ,
+                bottom: '-10px', 
+                left: '20%' ,
                 /* right: '50%', */
-                transform: 'translateX(-40%)', 
-                display: 'flex', // Garante alinhamento
-                justifyContent: 'center', // Centraliza os botões horizontalmente
+                transform: 'translateX(20%)', 
+                display: 'flex', 
+                justifyContent: 'center', 
                 gap: '5px',
                  },
             }}
@@ -107,6 +109,31 @@ const HomePage = () => {
             <Space /> <Space />
 
             <CoursePage isHomepage={true} />
+
+            
+          
+            <Button
+            color="primary"
+            /* variant="outlined" */
+            variant="contained"
+            
+            sx={{
+              position: 'absolute',
+              top: '72%',
+              right: '20px',
+              /* transform: 'translateY(-50%)',  */
+
+              '&:hover': {
+            backgroundColor: '#115293',
+            /* left: '60%' */ 
+            justifyContent: 'flex-end' ,
+              },
+            }}
+            component={Link}
+            to="/coursepage"
+          >
+            Click for more
+          </Button>
           
         </div>
         
