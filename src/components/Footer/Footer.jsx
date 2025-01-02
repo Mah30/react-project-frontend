@@ -7,6 +7,7 @@ const Footer = () => {
 
   
         <footer className = {styles.footer}>
+            
             <ul className={styles.social_list}>
                 <li>
                     <FaFacebook /> 

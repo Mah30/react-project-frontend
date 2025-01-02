@@ -1,11 +1,13 @@
 import React from 'react';
 import background4 from '../../assets/images/background4.jpg';
 import mulherprogramandoF from '../../assets/images/mulherprogramandoF.png';
-import SearchBar from '../SearchBar';
+import SearchBar from '../../components/SearchBar';
+/* import { Button } from '@mui/material'; */
 
 
 
-const AboutPage = () => {
+
+const AboutPage = ({handleSearchSubmit}) => {
 
     const containerStyle = {
         backgroundImage: `url(${background4}`, 
@@ -21,11 +23,10 @@ const AboutPage = () => {
 
     return ( 
 
-
         <div style={containerStyle}>
 
             <SearchBar/>
-            
+
 
             <h2>About this Project</h2>
             <p>This is a Webpage Project created with React for learning practice </p>
@@ -38,6 +39,8 @@ const AboutPage = () => {
             <a href="https://github.com/Mah30" target='_blank'>GitHub</a>
             <a href="https://www.linkedin.com/in/alinemariah-webdesigner/" target='_blank'>Linkedin</a>
         </div>
+
+        
 
 
      );

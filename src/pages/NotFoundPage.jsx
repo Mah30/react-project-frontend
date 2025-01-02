@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import notFoundImage from '../assets/images/notFoundImage.png';
-import SearchBar from './SearchBar';
+import SearchBar from '../components/SearchBar';
 
 
 

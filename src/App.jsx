@@ -28,6 +28,8 @@ import '@fontsource/roboto/700.css';
 
 
 
+
+
 function App() {
 
   
@@ -38,6 +40,7 @@ function App() {
      
       <Navbar />
 
+     
 
       <main className={"styles.main"}>  
         <Routes>
@@ -49,7 +52,7 @@ function App() {
           <Route path = '/talktous' element = {<TalkToUs/>} />
           <Route path='/login/*' element = {<Login/>} />
           
-
+  
 
         <Route path="*" element={<NotFoundPage />} /> 
 

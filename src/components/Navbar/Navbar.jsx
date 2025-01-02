@@ -16,6 +16,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Sidebar from '../Sidebar/Sidebar';
 import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
+import LoginIcon from '@mui/icons-material/Login';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
+
 /* import Sidebar from './components/Sidebar/Sidebar'; */
 
 function Navbar() {
@@ -106,28 +109,54 @@ function Navbar() {
             Contact
           </Button>
 
+
+
+          <Button
+            color="primary"
+            variant="contained"
+            startIcon={<LoginIcon />} // Ícone à esquerda do texto
+            sx={{ 
+              textTransform: 'capitalize',
+              backgroundColor: '#1976d2', // Fundo azul
+              color: 'white', // Texto branco
+            /*   borderRadius: '8px', */
+              padding: '8px 16px',
+              '&:hover': {
+                backgroundColor: '#115293', // Cor ao passar o mouse
+              },
+            }}
+            component={Link}
+            to="/login"
+          >
+            Login
+          </Button>
+
+          <Button
+            color="primary"
+            /* variant="outlined" */
+            variant="contained"
+            startIcon={<PersonAddIcon />}
+            sx={{
+              textTransform: 'capitalize',
+              backgroundColor: '#1976d2', // Fundo azul
+              color: 'white', // Texto branco
+            /*   borderRadius: '8px', */
+              padding: '8px 16px',
+              '&:hover': {
+                backgroundColor: '#115293', // Cor ao passar o mouse
+              },
+            }}
+            component={Link}
+            to="/register"
+          >
+            Register
+          </Button>
+
           </Box>
-          
-
-          <Button 
-          color="inherit" 
-          component = {Link} 
-          to = "/login"
-          >Login
-          </Button>
-
-          <Button 
-          color="inherit" 
-          component = {Link} 
-          to = "/login/register"
-          >Register
-          </Button>
-          
+           
         </Toolbar>
       </AppBar>
 
-
-      
       <Sidebar state = {state} setState = {setState} toggleDrawer = {toggleDrawer}></Sidebar>
     </Box>
   );
