@@ -1,7 +1,7 @@
 /* import React from 'react';
 import { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import styles from './Navbar.module.css';
+
 import Button from '@mui/material/Button';
 import { useRef} from 'react'; */
 
@@ -15,6 +15,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Sidebar from '../Sidebar/Sidebar';
 import { Link } from 'react-router-dom';
+import styles from './Navbar.module.css';
 /* import Sidebar from './components/Sidebar/Sidebar'; */
 
 function Navbar() {
@@ -55,6 +56,8 @@ function Navbar() {
 
           <Box sx={{ display: 'flex', gap: 2 }}>
           <Button 
+          
+          className={styles.changeColor}
           color="inherit" 
           component={Link} 
           to="/homepage"
@@ -64,6 +67,7 @@ function Navbar() {
           </Button>
 
           <Button 
+          className={styles.changeColor}
           color="inherit" 
           component={Link} 
           to="/aboutpage"
@@ -73,6 +77,7 @@ function Navbar() {
           </Button>
 
           <Button 
+          className={styles.changeColor}
           color="inherit" 
           component={Link} 
           to="/coursepage"
@@ -81,7 +86,8 @@ function Navbar() {
             Courses
           </Button>
 
-          <Button 
+          <Button
+          className={styles.changeColor}
           color="inherit" 
           component={Link} 
           to="/new"
@@ -91,19 +97,31 @@ function Navbar() {
           </Button>
           
           <Button 
+          className={styles.changeColor}
           color="inherit" 
           component={Link} 
           to="/talktous"
           sx = {{textTransform: 'Capitalize'}}
           >
-            Talk to us
+            Contact
           </Button>
 
           </Box>
           
 
-          <Button color="inherit" component = {Link} to = "/login">Login</Button>
-          <Button color="inherit" component = {Link} to = "/login/register">Register</Button>
+          <Button 
+          color="inherit" 
+          component = {Link} 
+          to = "/login"
+          >Login
+          </Button>
+
+          <Button 
+          color="inherit" 
+          component = {Link} 
+          to = "/login/register"
+          >Register
+          </Button>
           
         </Toolbar>
       </AppBar>

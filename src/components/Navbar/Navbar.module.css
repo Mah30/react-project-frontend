@@ -15,3 +15,8 @@
   padding-top: 5px;
   padding-left: 20px; */
 }
+
+.changeColor:hover{
+  color: brown;
+
+}
