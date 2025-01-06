@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import { useState } from 'react';
+/* import { useEffect, useState } from 'react'; */
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
 import Footer from './components/Footer/Footer';
@@ -14,6 +14,7 @@ import TalkToUs from './pages/TalkToUs/TalkToUs';
 import Login from './pages/Login/Login';
 
 
+
 /* import { AppProvider } from '@toolpad/core/AppProvider';
 import { SignInPage } from '@toolpad/core/SignInPage';
 import { useTheme } from '@mui/material/styles'; */
@@ -23,24 +24,18 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-
-
-
+import CourseDetails from './pages/CourseDetails/CourseDetails';
 
 
 
 
 function App() {
-
   
   return (
   
-      
     <div>
      
       <Navbar />
-
-     
 
       <main className={"styles.main"}>  
         <Routes>
@@ -51,9 +46,8 @@ function App() {
           <Route path='/new' element = {<New/>} />
           <Route path = '/talktous' element = {<TalkToUs/>} />
           <Route path='/login/*' element = {<Login/>} />
-          
-  
-
+          <Route path = '/course/:courseId' element = {<CourseDetails />} />
+ 
         <Route path="*" element={<NotFoundPage />} /> 
 
         </Routes>  

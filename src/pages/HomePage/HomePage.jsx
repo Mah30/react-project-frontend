@@ -121,10 +121,15 @@ const HomePage = () => {
               position: 'absolute',
               top: '72%',
               right: '20px',
-              /* transform: 'translateY(-50%)',  */
-
+              transform: 'translateY(-50%)',
+              backgroundColor: '#003049',  
+              color: 'white', // Texto branco
+              borderRadius: '6px',
+              padding: '8px 16px',
+            /*   textTransform: 'capitalize',*/
+            boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.2)',
               '&:hover': {
-            backgroundColor: '#115293',
+            backgroundColor: '#e9c46a',
             /* left: '60%' */ 
             justifyContent: 'flex-end' ,
               },
