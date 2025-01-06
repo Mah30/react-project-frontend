@@ -104,7 +104,7 @@ const HomePage = () => {
 
             <Space />
 
-            <h1>A melhor Plataforma de Cursos Online, para voce! </h1>
+            <h1>The best online course platform for you! </h1>
 
             <Space /> <Space />
 
@@ -123,7 +123,7 @@ const HomePage = () => {
               right: '20px',
               transform: 'translateY(-50%)',
               backgroundColor: '#003049',  
-              color: 'white', // Texto branco
+              color: 'white', 
               borderRadius: '6px',
               padding: '8px 16px',
             /*   textTransform: 'capitalize',*/

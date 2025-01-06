@@ -18,6 +18,7 @@ import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import LoginIcon from '@mui/icons-material/Login';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import logo from '../../assets/images/logo.png';
 
 /* import Sidebar from './components/Sidebar/Sidebar'; */
 
@@ -42,7 +43,7 @@ function Navbar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-            <IconButton
+          <IconButton
             size="large"
             edge="start"
             color="inherit"
@@ -50,12 +51,16 @@ function Navbar() {
             sx={{ mr: 1 }}
             onClick={toggleDrawer('left', true)}
           >
-            <MenuIcon />
-            </IconButton>
-          
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}> {/* Permite que o Typography ocupe o espaço restante, empurrando outros elementos para as extremidades.  */}    
+          <MenuIcon />
+          </IconButton>
+           
+
+           <Link to="/homepage">
+          <Box component="img" /* src={logo} */ alt="Logo" sx={{ height: 30, width: 30, flexGrow: 1 , variant:"h6"}}></Box></Link>
+
+        {/*   <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>    
             Online Courses
-          </Typography>
+          </Typography> */}
 
           <Box sx={{ display: 'flex', gap: 2 }}>
           <Button 
@@ -114,15 +119,15 @@ function Navbar() {
           <Button
             color="primary"
             variant="contained"
-            startIcon={<LoginIcon />} // Ícone à esquerda do texto
+            startIcon={<LoginIcon />} 
             sx={{ 
               textTransform: 'capitalize',
-              backgroundColor: '#1976d2', // Fundo azul
-              color: 'white', // Texto branco
+              backgroundColor: '#1976d2', 
+              color: 'white', 
             /*   borderRadius: '8px', */
               padding: '8px 16px',
               '&:hover': {
-                backgroundColor: '#115293', // Cor ao passar o mouse
+                backgroundColor: '#115293', 
               },
             }}
             component={Link}
@@ -138,12 +143,12 @@ function Navbar() {
             startIcon={<PersonAddIcon />}
             sx={{
               textTransform: 'capitalize',
-              backgroundColor: '#1976d2', // Fundo azul
-              color: 'white', // Texto branco
+              backgroundColor: '#1976d2', 
+              color: 'white', 
             /*   borderRadius: '8px', */
               padding: '8px 16px',
               '&:hover': {
-                backgroundColor: '#115293', // Cor ao passar o mouse
+                backgroundColor: '#115293', 
               },
             }}
             component={Link}
@@ -163,45 +168,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
-
-
-
-/* const Navbar = () => {
-    const navRef = useRef();
-
-    const showNavBar = () => {
-        navRef.current.classList.toggle("responsive_nav");
-    }
-    
-
-    return ( 
-
-        <header>                       
-
-            <nav className={styles.nav} ref={navRef}>
-
-                <img className={styles.logo} src="./src/assets/img/logo.png"/>
-os botoes 
-                <h2>M'Art</h2>
-
-                    <a href="/home">Home</a>
-                    <a href="/contact">Contact</a>
-                    <a href="/service">Service</a>
-                    <a href="/about">About</a>
-                    
-                    <button className='nav-btn' nav-close-btn onClick={showNavBar}>
-                        <FaTimes/>
-                    </button>
-                      
-            </nav>
-
-            <button className='nav-btn' onClick={showNavBar}> 
-                <FaBars/>
-            </button>
-
-        </header>
-    );
-}
- 
-export default Navbar; */

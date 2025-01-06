@@ -7,6 +7,8 @@ import SearchBar from '../components/SearchBar';
 
 const NotFoundPage = () => {
 
+    
+
 
     return ( 
 
@@ -24,9 +26,21 @@ const NotFoundPage = () => {
                 style = {{maxWidth: "100%", height: "auto", }}
                 />
 
-                <Link to ="/" style = {{color:"blue", textDecoration: "underline"}}>Back to Home Page</Link>
+        </div>
+
+                <Link to ="/" style = {{color:"blue", textDecoration: "underline"}}>
+
+<button
+            className="btn btn-primary"
+            onClick={() => {
+                navigate(-1);
+            }}
+            >
+            Back to Homepage
+            </button>
+                </Link>
                 
-            </div>
+            
         </>
      );
 }

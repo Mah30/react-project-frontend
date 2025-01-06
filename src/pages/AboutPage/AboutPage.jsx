@@ -1,6 +1,6 @@
 import React from 'react';
 import background4 from '../../assets/images/background4.jpg';
-import mulherprogramandoF from '../../assets/images/mulherprogramandoF.png';
+/* import mulherprogramandoF from '../../assets/images/mulherprogramandoF.png'; */
 import SearchBar from '../../components/SearchBar';
 /* import { Button } from '@mui/material'; */
 
@@ -33,15 +33,10 @@ const AboutPage = ({handleSearchSubmit}) => {
             <p>Created from: Mariah</p>
 
             
-
-            <img src={mulherprogramandoF} alt="woman programming" />
-
+           
             <a href="https://github.com/Mah30" target='_blank'>GitHub</a>
             <a href="https://www.linkedin.com/in/alinemariah-webdesigner/" target='_blank'>Linkedin</a>
         </div>
-
-        
-
 
      );
 }

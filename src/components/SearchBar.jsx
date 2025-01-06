@@ -24,6 +24,7 @@ const SearchBar = () => {
 
     return ( 
         <div>
+          
             {/* Barra de pesquisa */}
 
       <Box

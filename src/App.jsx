@@ -12,7 +12,8 @@ import CoursePage from './pages/CoursePage/CoursePage';
 import New from './pages/New/New';
 import TalkToUs from './pages/TalkToUs/TalkToUs';
 import Login from './pages/Login/Login';
-
+import CourseDetails from './pages/CourseDetails/CourseDetails';
+import Register from './pages/Login/Register';
 
 
 /* import { AppProvider } from '@toolpad/core/AppProvider';
@@ -24,7 +25,7 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import CourseDetails from './pages/CourseDetails/CourseDetails';
+
 
 
 
@@ -39,13 +40,14 @@ function App() {
 
       <main className={"styles.main"}>  
         <Routes>
-          <Route path='/' element = {<HomePage/>} />
+          <Route path='/' element = {<HomePage />} />
           <Route path='/homepage' element = {<HomePage/>} />
-          <Route path = '/aboutpage' element = {<AboutPage/>} />
-          <Route path='/coursepage' element = {<CoursePage/>} />
+          <Route path = '/aboutpage' element = {<AboutPage />} />
+          <Route path='/coursepage' element = {<CoursePage />} />
           <Route path='/new' element = {<New/>} />
-          <Route path = '/talktous' element = {<TalkToUs/>} />
+          <Route path = '/talktous' element = {<TalkToUs />} />
           <Route path='/login/*' element = {<Login/>} />
+          <Route path = '/register' element = {<Register />} />
           <Route path = '/course/:courseId' element = {<CourseDetails />} />
  
         <Route path="*" element={<NotFoundPage />} /> 

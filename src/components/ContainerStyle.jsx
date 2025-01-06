@@ -4,14 +4,14 @@ import background3 from '../assets/images/background3.jpg';
 const ContainerStyle = () => {
 
     const containerStyle = {
-        backgroundImage: `url(${background3})`, // Define a imagem de fundo
-        backgroundSize: 'cover', // Faz a imagem cobrir o contêiner
-        backgroundPosition: 'center', // Centraliza a imagem
-        backgroundRepeat: 'no-repeat', // Evita repetição
-        height: '100vh', // Ocupa 100% da altura da viewport
-        width: '100vw', // Ocupa 100% da largura da viewport
+        backgroundImage: `url(${background3})`, // imagem de fundo
+        backgroundSize: 'cover', // p imagem cobre o contêiner
+        backgroundPosition: 'center', 
+        backgroundRepeat: 'no-repeat', 
+        height: '100vh', 
+        width: '100vw', 
         display: 'flex',
-        flexDirection: 'column', // Organiza os elementos verticalmente
+        flexDirection: 'column', 
       };
     return ( 
         <div style={containerStyle}>

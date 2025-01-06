@@ -1,15 +1,15 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import styles from './CoursePage.module.css';
-import pinturaOvo from '../../assets/images/pinturaOvo.jpg';
+/* import pinturaOvo from '../../assets/images/pinturaOvo.jpg';
 import origumi from '../../assets/images/origumi.jpg';
 import costura from '../../assets/images/costura.jpg';
 import molduraQuadros from '../../assets/images/molduraQuadros.jpg';
 import flores from '../../assets/images/flores.jpg';
 import modelagem from '../../assets/images/modelagem.jpg';
-import encadernacao from '../../assets/images/encadernacao.jpg';
-import colagem from '../../assets/images/colagem.jpg';
-
+import encadernacao from '../../assets/images/encadernacao.jpg'; */
+/* import colagem from '../../assets/images/colagem.jpg'; */
+import { Link } from 'react-router-dom';
 import ContainerStyle from "../../components/ContainerStyle";
 import CourseDetails from "../CourseDetails/CourseDetails";
 
@@ -35,7 +35,7 @@ const fetchCourses = async () => {
             console.error(`Error HTTP: ${response.status}`);
         }
     } catch (error) {
-        console.error('', error);
+        console.error('Something was wrong', error);
     } finally {
       setLoading(false);  // Finaliza o estado de carregamento
     } 
@@ -69,10 +69,15 @@ return (
       {coursesToDisplay.map((course, index) => (
 
         <div className= {styles.card} key={index}>
+
+            <Link to = {`/course/${course.id}`} >
             <img 
               className= {styles["card-img"]} 
-              src={course.img || pinturaOvo} 
-              alt={course.title} />  
+              src={course.image || "http://localhost:4000/generate-image"} 
+              alt={course.title}
+            />
+              
+            </Link>  
 
             <div>
               <h3 

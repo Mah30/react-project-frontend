@@ -32,10 +32,10 @@
   }
   
   .card-img {
-    width: 100%; /* Faz a imagem ocupar o máximo do card */
-    height: 150px; /* auto */
+    width: 100%; /* imagem ocupa o máximo do card */
+    height: 150px;
     border-radius: 8px;
-    object-fit: cover; /* Garante que a imagem seja bem exibida */
+    object-fit: cover; /* pra imagem ser bem exibida */
   }
 
   .cardTitle{
@@ -79,6 +79,7 @@
   .card:hover {
     transform: translateY(-15px);
   }
+  
   
   /* Responsividade */
   @media (max-width: 768px) {
