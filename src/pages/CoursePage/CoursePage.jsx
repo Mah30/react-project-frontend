@@ -94,6 +94,10 @@ return (
             <div className={styles.cardPricing}>
               <span className={styles.cardPrice}>${course.price || "Gratis"} </span>
             </div>
+
+            <Link to = {`/purchase/${course.id}`}>
+              <button type="button" className="btn btn-primary">Buy it</button>
+            </Link>
           </div> 
         </div>
       ))}
@@ -103,8 +107,6 @@ return (
 
 );
 
-
 }
-
 
 export default CoursePage;
