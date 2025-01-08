@@ -10,68 +10,60 @@ const Login  = () => {
 
 
     const handleSubmit = async (event) => {
-        event.preventDefault(); //impede o carregamento da pagina
+        event.preventDefault(); 
 
         const newLogin = { email, password };
 
         
         try {
-            const response = await fetch('http://localhost:4000/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type' : 'application/json' ,
-                },
-                body: JSON.stringify(newLogin),      
-            });
-
-            if (!response.ok) {
-                throw new Error ('Login failed');
+            // Busca o usuário pelo email e senha
+            const response = await fetch(
+              `http://localhost:4000/login?email=${email}&password=${password}`
+            );
+            const user = await response.json();
+      
+            if (user.length === 0) {
+              setError('Incorrect email or password!');
+              return;
             }
-
-            if(response.ok) {
-                const newLoginData = await response.json();
-                navigate(`/login/ ${newLoginData}`)
-            }
-         }  catch (error) {
-            console.log(error)
-    }
-  };
-     
-
-    return ( 
-        <div>
-            
+      
+            // Redireciona o usuário para outra página após login ok
+            navigate('/dashboard');
+          } catch (error) {
+            console.error(error);
+            setError('Error logging in. Please try again.');
+          }
+        };
+      
+        return (
+          <div>
             <h3>Login</h3>
             <form onSubmit={handleSubmit}>
-                <label>
-                    Email
-                    <input
-                type="email"
-                name="email"
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-                placeholder="Type your Email here"  
-                /> 
-                </label>
-                <br />
-                <label> Password
+              <label>
+                Email:
                 <input
-                type="password"
-                name="password"
-                value={password}
-                onChange={(event) => setPassword(event.target.value)}
-                placeholder="Type your password here"
+                  type="email"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                  placeholder="Type your email"
                 />
-                </label>
-
-                <br />
-
-                <button type='submit'>Sign in</button>
-                {/* {error && <p style={{ color: "red" }}>{error}</p>} */}
-                
+              </label>
+              <br />
+              <label>
+                Senha:
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(event) => setPassword(event.target.value)}
+                  placeholder="Type your password"
+                />
+              </label>
+              <br />
+              <button type="submit">Sign in </button>
             </form>
-        </div>
-     );
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+          </div>
+        );
 };
  
 export default Login;

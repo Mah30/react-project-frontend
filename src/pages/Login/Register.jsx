@@ -8,6 +8,7 @@ const Register = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const [isChecked, setIsChecked] = useState(false);
+  
 
   const handleSubmit = async (event) => {
     event.preventDefault(); 
@@ -16,12 +17,19 @@ const Register = () => {
 
     try {
       // Checa se o email j tá registrado
-      const response = await fetch(`http://localhost:4000/login?email=${email}`);
+      const response = await fetch(`http://localhost:4000/register?email=${email}`);
       const existingUsers = await response.json();
+
+      if (existingUsers.length > 0) {
+        setError('This email is already registered!');
+        setSuccess('');
+       
+            return; // Stops the process if the email already exists 
+      }
 
 
       // REgistrta novo usuario
-      const registerResponse = await fetch('http://localhost:4000/login', {
+      const registerResponse = await fetch('http://localhost:4000/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json', 
@@ -29,8 +37,20 @@ const Register = () => {
         body: JSON.stringify(newUser),
       });
 
+      if (!registerResponse.ok) {
+        throw new Error('Error while registering the user');
+      }
+
+      // Se o registro for realmente feito:
       setSuccess('User successfully registered!');
       setError('');
+      setFirstName('');
+      setLastName('');
+      setEmail('');
+      setPassword('');
+      setIsChecked(false);
+
+
     } catch (error) {
       console.error('Error:', error); // Error:
       setError('Error during registration. Please try again.');
@@ -52,7 +72,7 @@ const Register = () => {
           />
         </label>
 
-        <br />
+        <br />  
 
         <label>
           Last Name:
@@ -64,7 +84,7 @@ const Register = () => {
           />
         </label>
         
-        <br />
+        <br /> 
 
         <label>
           Email:
@@ -90,14 +110,14 @@ const Register = () => {
 
         <br />
 
-        <label>
+        {/* <label>
           I agree to the terms:
           <input
             type="checkbox"
             checked={isChecked}
             onChange={(event) => setIsChecked(event.target.checked)}
           />
-        </label>
+        </label> */}
 
         <br />
 
