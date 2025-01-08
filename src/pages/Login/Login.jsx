@@ -1,79 +1,78 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-
-
-const useForm = (initialState) => {
-    const [formValues, setFormValues] = useState(initialState);
-  
-    const handleChange = (event) => {
-      const { name, value } = event.target;
-      setFormValues({ ...formValues, [name]: value });
-    };
-  
-    return [formValues, handleChange];
-  };
-
-  
-
-
+ 
 const Login  = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
+    const navigate = useNavigate();
 
-    const [formValues, handleChange] = useForm({ email: "", password: "" });
-
-    
 
     const handleSubmit = async (event) => {
         event.preventDefault(); //impede o carregamento da pagina
-        try {
-            const response = await fetch.post("", {
-              email,
-              password,
-            });
-            localStorage.setItem("token", response.data.token);
-      alert("Login bem-sucedido!");
-    } catch (err) {
-      setError("Login falhou. Verifique suas credenciais.");
-    }
 
-    console.log("Email:", formValues.email);
-    console.log("Password", formValues.password);
-  };
-
+        const newLogin = { email, password };
 
         
-   
+        try {
+            const response = await fetch('http://localhost:4000/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type' : 'application/json' ,
+                },
+                body: JSON.stringify(newLogin),      
+            });
 
+            if (!response.ok) {
+                throw new Error ('Login failed');
+            }
 
+            if(response.ok) {
+                const newLoginData = await response.json();
+                navigate(`/login/ ${newLoginData}`)
+            }
+         }  catch (error) {
+            console.log(error)
+    }
+  };
+     
 
     return ( 
         <div>
             
-            <h1>Login</h1>
+            <h3>Login</h3>
             <form onSubmit={handleSubmit}>
-                <input
+                <label>
+                    Email
+                    <input
                 type="email"
                 name="email"
-                value={formValues.email}
+                value={email}
                 onChange={(event) => setEmail(event.target.value)}
-                placeholder="Type your Email here"  />
-
+                placeholder="Type your Email here"  
+                /> 
+                </label>
+                <br />
+                <label> Password
                 <input
                 type="password"
                 name="password"
-                value={formValues.password}
+                value={password}
                 onChange={(event) => setPassword(event.target.value)}
                 placeholder="Type your password here"
                 />
+                </label>
+
+                <br />
 
                 <button type='submit'>Sign in</button>
+                {/* {error && <p style={{ color: "red" }}>{error}</p>} */}
                 
             </form>
         </div>
      );
-}
+};
  
 export default Login;
 
