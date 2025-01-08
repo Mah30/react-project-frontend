@@ -22,13 +22,13 @@ const Login  = () => {
             );
             const user = await response.json();
       
-            if (user.length === 0) {
-              setError('Incorrect email or password!');
+            if (!response.ok) {
+              setError('Invalid email or password!');
               return;
             }
       
             // Redireciona o usuário para outra página após login ok
-            navigate('/dashboard');
+            navigate('/userspace');
           } catch (error) {
             console.error(error);
             setError('Error logging in. Please try again.');

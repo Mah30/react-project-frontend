@@ -33,24 +33,6 @@ const CourseDetails = () => {
       }
 
 
-
-  
-   /*  async function fetchSingleCourse ()  {
-        try{
-            if(response.ok) {
-                const data = await response.json();
-                setCourses(data);//atualiza o estado com os cursos
-            }else{
-                console.error(`Error HTTP: ${response.status}`);
-            }
-        } catch (error) {
-            console.error('Something was wrong', error);
-        } finally {
-          setLoading(false);  // Finaliza o estado de carregamento
-        } 
-    }; */
-
-
     return ( 
 
         <div>

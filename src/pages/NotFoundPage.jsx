@@ -2,10 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import notFoundImage from '../assets/images/notFoundImage.png';
 import SearchBar from '../components/SearchBar';
+import { useNavigate } from 'react-router-dom';
 
 
 
 const NotFoundPage = () => {
+    const navigate = useNavigate();
 
     
 
@@ -23,21 +25,18 @@ const NotFoundPage = () => {
                 <img
                 src={notFoundImage}
                 alt='Image to not found page'
-                style = {{maxWidth: "100%", height: "auto", }}
+                style = {{maxWidth: "60%", height: "auto", }}
                 />
 
-        </div>
+            </div>
 
                 <Link to ="/" style = {{color:"blue", textDecoration: "underline"}}>
 
-<button
-            className="btn btn-primary"
-            onClick={() => {
-                navigate(-1);
-            }}
-            >
-            Back to Homepage
-            </button>
+                    <button
+                    className="btn btn-primary"
+                    >
+                    Back to Homepage
+                    </button>
                 </Link>
                 
             
@@ -46,3 +45,5 @@ const NotFoundPage = () => {
 }
  
 export default NotFoundPage;
+
+// Botar o botao de voltar para cima, na pagina

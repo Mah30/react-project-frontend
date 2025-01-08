@@ -14,18 +14,17 @@ import TalkToUs from './pages/TalkToUs/TalkToUs';
 import Login from './pages/Login/Login';
 import CourseDetails from './pages/CourseDetails/CourseDetails';
 import Register from './pages/Login/Register';
+import UserSpace from './pages/UserSpace/UserSpace';
 
 
 /* import { AppProvider } from '@toolpad/core/AppProvider';
 import { SignInPage } from '@toolpad/core/SignInPage';
 import { useTheme } from '@mui/material/styles'; */
 
-
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-
 
 
 
@@ -49,6 +48,7 @@ function App() {
           <Route path='/login/*' element = {<Login/>} />
           <Route path = '/register' element = {<Register />} />
           <Route path = '/course/:courseId' element = {<CourseDetails />} />
+          <Route path = '/userspace' element = {<UserSpace />} />
  
         <Route path="*" element={<NotFoundPage />} /> 
 

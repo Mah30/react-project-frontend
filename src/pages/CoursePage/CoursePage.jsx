@@ -12,13 +12,14 @@ import encadernacao from '../../assets/images/encadernacao.jpg'; */
 import { Link } from 'react-router-dom';
 import ContainerStyle from "../../components/ContainerStyle";
 import CourseDetails from "../CourseDetails/CourseDetails";
+import Button from '@mui/material/Button';
 
 
 
 const API_URL = 'http://localhost:4000'; //url to the backend
 
 
-const CoursePage = ({isHomepage}) => {
+const CoursePage = ({isHomepage, isUserSpace}) => {
   const [courses, setCourses] = useState ([]);
   const [loading, setLoading] = useState (true);
   const [error, setError] = useState (null);
@@ -53,7 +54,17 @@ useEffect(() => {
 if (error) return <p>Erro ao carregar cursos: {error}</p>; */
 
 
-const coursesToDisplay = isHomepage ? courses.slice(0,4) : courses; 
+//para mostrar os cursos em numero reduzido nessas duas paginas abaixo
+const coursesToDisplay = isHomepage 
+? courses.slice(0,4) 
+: isUserSpace 
+? courses.slice(0,2)
+: courses; 
+
+   
+
+if (loading) return <p>Loading courses...</p>;
+
 
 
 return (
@@ -61,9 +72,10 @@ return (
   <div> 
     {selectedCourse ? (
     <CourseDetails 
-    course = {selectedCourse} 
-    onBack = {() => setSelectedCourse(null)} />
-    ): (
+      course = {selectedCourse} 
+      onBack = {() => setSelectedCourse(null)} 
+    />
+    ) : (
    
     <section className= {isHomepage ? styles.containerSmall : styles.container}>
       {coursesToDisplay.map((course, index) => (
@@ -104,7 +116,6 @@ return (
     </section>
       )}
   </div>
-
 );
 
 }
