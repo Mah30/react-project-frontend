@@ -100,7 +100,7 @@ return (
               </span>
               <div className={styles.cardStatus}>
                 <span>{course.students || "No"} students</span>
-                <span>{course.rating || "N/A"} de avaliacao</span>
+                
               </div>
 
             <div className={styles.cardPricing}>

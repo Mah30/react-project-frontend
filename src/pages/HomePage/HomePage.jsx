@@ -105,7 +105,9 @@ const HomePage = () => {
 
             <Space />
 
-            <h1>The best online courses platform for you! </h1>
+
+
+            <h1 className= {styles.title}>The best online courses platform for you! </h1>
 
             <Space /> <Space />
 
@@ -122,7 +124,7 @@ const HomePage = () => {
               margin: '16px 0', 
               width: 'auto', 
               padding: '8px 16px',
-              backgroundColor: '#003049',
+              backgroundColor: '#1976d2',
               color: 'white',
               borderRadius: '6px',
               boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.2)',

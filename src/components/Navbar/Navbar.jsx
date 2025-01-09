@@ -53,9 +53,11 @@ function Navbar() {
         <Toolbar
         sx={{
           display: "flex",
-          
-
+          justifyContent: "space-between",
+          alignItems: "center"
         }}>
+        
+         {/* Botao sidebar */}
           <IconButton
             size="large"
             edge="start"
@@ -65,15 +67,29 @@ function Navbar() {
             onClick={toggleDrawer('left', true)}
           >
           <MenuIcon />
+
+        <Link to="/homepage">
+          <Box 
+          component="img" 
+          src={logo} 
+          alt="Logo" 
+          sx={{ 
+            height: 50, 
+            width: 50, 
+            flexGrow: 1 , 
+            variant:"h6",
+            marginLeft: 2       
+          }} />
+        </Link>
+   
           </IconButton>
-           
 
-           <Link to="/homepage">
-          <Box component="img" src={logo} alt="Logo" sx={{ height: 50, width: 50, flexGrow: 1 , variant:"h6"}}></Box></Link>
-
-        {/*   <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>    
-            Online Courses
-          </Typography> */}
+          <Typography 
+              variant="h6" 
+              component="div" 
+              sx={{ flexGrow: 1 }}>    
+            M'ART's Courses
+          </Typography>
 
           <Box sx={{ display: 'flex', gap: 2 }}>
           <Button 
