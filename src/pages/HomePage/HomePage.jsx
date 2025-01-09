@@ -11,7 +11,7 @@ import CoursePage from '../CoursePage/CoursePage';
 import Space from '../../components/Space';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import { borderRadius } from '@mui/system';
+import { borderRadius, style } from '@mui/system';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import { Link } from 'react-router-dom';
@@ -100,45 +100,46 @@ const HomePage = () => {
                 width: "100vw" 
                 }}
                 ></div>
+
             </Carousel> 
 
             <Space />
 
-            <h1>The best online course platform for you! </h1>
+            <h1>The best online courses platform for you! </h1>
 
             <Space /> <Space />
 
             <CoursePage isHomepage={true} />
 
+             <div>  
+              <Button className={styles.btnposition}
+              color="primary"
+              variant="contained"
             
-          
-            <Button
-            color="primary"
-            /* variant="outlined" */
-            variant="contained"
-            
-            sx={{
-              position: 'absolute',
-              top: '72%',
-              right: '20px',
-              transform: 'translateY(-50%)',
-              backgroundColor: '#003049',  
-              color: 'white', 
-              borderRadius: '6px',
+              sx={{
+              position: 'relative',
+              alignSelf: 'flex-end', 
+              margin: '16px 0', 
+              width: 'auto', 
               padding: '8px 16px',
-            /*   textTransform: 'capitalize',*/
-            boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.2)',
+              backgroundColor: '#003049',
+              color: 'white',
+              borderRadius: '6px',
+              boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.2)',
+              '@media (max-width: 768px)': {
+                display: 'block', 
+                margin: '0 auto', 
+              },
               '&:hover': {
-            backgroundColor: '#e9c46a',
-            /* left: '60%' */ 
-            justifyContent: 'flex-end' ,
+                backgroundColor: '#bc3908',
               },
             }}
             component={Link}
             to="/coursepage"
           >
             Click for more
-          </Button>
+            </Button>
+          </div> 
           
         </div>
         

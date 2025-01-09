@@ -6,7 +6,6 @@ import SearchBar from '../../components/SearchBar';
 
 
 
-
 const AboutPage = ({handleSearchSubmit}) => {
 
     const containerStyle = {

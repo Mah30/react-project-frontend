@@ -40,9 +40,22 @@ function Navbar() {
   return (
 
 
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
+    <Box sx={{ 
+      flexGrow: 1 ,
+      display: {
+        xs: 'none',
+        sm: 'block'} //responsividade, consertar
+      }}
+    >
+      <AppBar 
+      position="static"
+      sx = {{backgroundColor: '#003049'}}>
+        <Toolbar
+        sx={{
+          display: "flex",
+          
+
+        }}>
           <IconButton
             size="large"
             edge="start"
@@ -56,7 +69,7 @@ function Navbar() {
            
 
            <Link to="/homepage">
-          <Box component="img" /* src={logo} */ alt="Logo" sx={{ height: 30, width: 30, flexGrow: 1 , variant:"h6"}}></Box></Link>
+          <Box component="img" src={logo} alt="Logo" sx={{ height: 50, width: 50, flexGrow: 1 , variant:"h6"}}></Box></Link>
 
         {/*   <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>    
             Online Courses
@@ -127,7 +140,7 @@ function Navbar() {
             /*   borderRadius: '8px', */
               padding: '8px 16px',
               '&:hover': {
-                backgroundColor: '#115293', 
+                backgroundColor: '#bc3908', 
               },
             }}
             component={Link}
@@ -148,7 +161,7 @@ function Navbar() {
             /*   borderRadius: '8px', */
               padding: '8px 16px',
               '&:hover': {
-                backgroundColor: '#115293', 
+                backgroundColor: '#bc3908', 
               },
             }}
             component={Link}

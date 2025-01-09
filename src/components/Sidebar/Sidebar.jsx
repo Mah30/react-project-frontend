@@ -1,31 +1,29 @@
-/* import React from 'react';
-import styles from './Sidebar.module.css';
-
-const Sidebar = () => {
-    return ( 
-        <div>
-            <h2>Teste Sidebar</h2>
-        </div>
-     );
-} */
 import styles from './Sidebar.module.css';
 import * as React from 'react';
+import { useMediaQuery, useTheme } from '@mui/material';//responsividade
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import HomeIcon from '@mui/icons-material/Home';
+import InfoIcon from '@mui/icons-material/Info';
+import SchoolIcon from '@mui/icons-material/School';
+import LoupeIcon from '@mui/icons-material/Loupe';
+import LoginIcon from '@mui/icons-material/Login';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 import { Link } from 'react-router-dom';
 
 //AnchorTemporaryDrawer
 
 function Sidebar({state, setState, toggleDrawer}) {
+  /* const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm')); */ //Responsividade (mudar isso)
   
 
   const list = (anchor) => (
@@ -38,16 +36,14 @@ function Sidebar({state, setState, toggleDrawer}) {
     
       <List>
         {[
-          { text: 'Home', path: '/homepage' },
-          { text: 'About', path: '/aboutpage' },
-          { text: 'Courses', path: '/coursepage' },
-          { text: 'New Courses', path: '/new' },
+          { text: 'Home', path: '/homepage', icon: <HomeIcon /> },
+          { text: 'About', path: '/aboutpage', icon: <InfoIcon /> },
+          { text: 'Courses', path: '/coursepage', icon: <SchoolIcon />  },
+          { text: 'New', path: '/new', icon: <LoupeIcon />  },
         ].map((item, index) => (
           <ListItem key={item.text} disablePadding>
             <ListItemButton component={Link} to={item.path}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
+              <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText primary={item.text} />
             </ListItemButton>
           </ListItem>
@@ -58,16 +54,14 @@ function Sidebar({state, setState, toggleDrawer}) {
 
       <List>
         {[
-          { text: 'Talk to us', path: '/talktous'  },
-          { text: 'login', path: '/login'},
-          { text: 'register', path: '/register' },
-          { text: 'Service', path: '/service' },
+          { text: 'Contact', path: '/talktous', icon: <MailIcon /> },
+          { text: 'login', path: '/login', icon: <LoginIcon />},
+          { text: 'register', path: '/register', icon: <PersonAddIcon /> },
+          { text: 'Service', path: '/service', icon: <SettingsSuggestIcon /> },
         ].map((item, index) => (
           <ListItem key={item.text} disablePadding>
             <ListItemButton component={Link} to={item.path}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
+            <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText primary={item.text} />
             </ListItemButton>
           </ListItem>

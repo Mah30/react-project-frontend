@@ -1,0 +1,9 @@
+@media (max-width: 768px) {
+    .btnposition {
+      top: auto;
+      bottom: 16px; /* Ajusta o botão em telas menores */
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }

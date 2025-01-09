@@ -6,19 +6,35 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
+
+const API_URL = 'http://localhost:4000';
+
 // Search button
 
 const SearchBar = () => {
     const [ search, setSearch] = useState ([]);
-
     const navigate = useNavigate ();
 
     const handleSearchChange = (event) => {
         setSearch (event.target.value); // Atualiza o estado com o texto digitado
     };
 
-    const handleSearchSubmit = () => {
-        navigate(`/search-results?q=${search}`);
+    const handleSearchSubmit = async () => {
+      try {
+        const response = await fetch(`${API_URL}/courses?q=${search}`); // Busca cursos com base no termo
+        if (response.ok) {
+          const results = await response.json();
+          if (results.length > 0) {
+            navigate(`/search-results?q=${search}`, { state: { results } }); // Redireciona para a página de resultados com os cursos encontrados
+          } else {
+            navigate('/404'); // Redireciona para 404 se nenhum curso for encontrado
+          }
+        } else {
+          console.error(`HTTP Error: ${response.status}`);
+        }
+      } catch (error) {
+        console.error('Error during search:', error);
+      }
     };
     
 
