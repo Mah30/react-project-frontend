@@ -13,6 +13,13 @@ const Register = () => {
   const handleSubmit = async (event) => {
     event.preventDefault(); 
 
+    if (!firstname || !lastname || !email || !password) {
+      setError('All fields are required.');
+      setSuccess('');
+      return; // Interrompe o envio se algum campo estiver vazio
+    }
+
+
     const newUser = { firstname, lastname, email, password };
 
     try {
@@ -24,7 +31,7 @@ const Register = () => {
         setError('This email is already registered!');
         setSuccess('');
        
-            return; // Stops the process if the email already exists 
+        return; // interrompe o process se o email ja existir
       }
 
 

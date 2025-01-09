@@ -24,7 +24,7 @@ const Footer = () => {
             </p>
 
 
-            <p>Desenvolvido por Mariah.       Find this source on {""}
+            <p>Developed by Mariah.       Find this source on {""}
                 <a href="https://github.com/Mah30/react-project-frontend" target='_blank'>
                     
                         GitHub! 

@@ -76,7 +76,12 @@ const SearchBar = () => {
           onClick={handleSearchSubmit}
           sx={{ 
             marginLeft: '8px' , 
-            textTransform: 'Capitalize'
+            textTransform: 'Capitalize',
+            '&:hover': {
+              backgroundColor: '#bc3908',
+            }
+            
+
             } }>
 
           Search

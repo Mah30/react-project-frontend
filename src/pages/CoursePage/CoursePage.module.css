@@ -79,6 +79,19 @@
   .card:hover {
     transform: translateY(-15px);
   }
+  .btnprimary{
+    position: relative;
+    align-self: flex-end;
+    margin: 16px 0;
+    width: auto;
+    padding: 6px;
+    border-radius: 6px;
+    background-color: #bc3908;
+    color: white;
+    cursor: pointer;
+
+  
+  }
   
   
   /* Responsividade */

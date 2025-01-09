@@ -13,6 +13,8 @@ import { Link } from 'react-router-dom';
 import ContainerStyle from "../../components/ContainerStyle";
 import CourseDetails from "../CourseDetails/CourseDetails";
 import Button from '@mui/material/Button';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
 
 
 
@@ -108,7 +110,14 @@ return (
             </div>
 
             <Link to = {`/purchase/${course.id}`}>
-              <button type="button" className="btn btn-primary">Buy it</button>
+              {<button type="button" className={styles.btnprimary}
+
+              >
+              <ShoppingCartIcon style={{ marginRight: '8px' }} />
+                Buy it
+              </button>}
+
+              
             </Link>
           </div> 
         </div>

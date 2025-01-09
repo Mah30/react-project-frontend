@@ -41,10 +41,7 @@ function Navbar() {
 
 
     <Box sx={{ 
-      flexGrow: 1 ,
-      display: {
-        xs: 'none',
-        sm: 'block'} //responsividade, consertar
+      flexGrow: 1,
       }}
     >
       <AppBar 

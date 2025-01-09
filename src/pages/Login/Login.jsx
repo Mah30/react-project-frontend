@@ -12,6 +12,12 @@ const Login  = () => {
     const handleSubmit = async (event) => {
         event.preventDefault(); 
 
+        if (!email || !password) {
+          setError('All fields are required.');
+          setSuccess('');
+          return; // Interrompe o envio se algum campo estiver vazio
+        }
+
         const newLogin = { email, password };
 
         
