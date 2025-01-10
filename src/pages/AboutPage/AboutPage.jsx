@@ -1,5 +1,5 @@
 import React from 'react';
-import background4 from '../../assets/images/background4.jpg';
+/* import background4 from '../../assets/images/background4.jpg'; */
 /* import mulherprogramandoF from '../../assets/images/mulherprogramandoF.png'; */
 import SearchBar from '../../components/SearchBar';
 /* import { Button } from '@mui/material'; */
@@ -9,7 +9,7 @@ import SearchBar from '../../components/SearchBar';
 const AboutPage = ({handleSearchSubmit}) => {
 
     const containerStyle = {
-        backgroundImage: `url(${background4}`, 
+        backgroundImage: `url(${""/* background4 */}`, 
         backgroundSize: 'cover', 
         backgroundPosition: 'center', 
         backgroundRepeat: 'no-repeat', 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import notFoundImage from '../assets/images/notFoundImage.png';
+import notFoundImage from '../assets/images/notFoundImage.jpg';
 import SearchBar from '../components/SearchBar';
 import { useNavigate } from 'react-router-dom';
 

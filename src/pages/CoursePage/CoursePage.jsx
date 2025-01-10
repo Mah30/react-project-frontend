@@ -10,7 +10,7 @@ import modelagem from '../../assets/images/modelagem.jpg';
 import encadernacao from '../../assets/images/encadernacao.jpg'; */
 /* import colagem from '../../assets/images/colagem.jpg'; */
 import { Link } from 'react-router-dom';
-import ContainerStyle from "../../components/ContainerStyle";
+/* import ContainerStyle from "../../components/ContainerStyle"; */
 import CourseDetails from "../CourseDetails/CourseDetails";
 import Button from '@mui/material/Button';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
