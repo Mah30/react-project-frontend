@@ -86,7 +86,7 @@ return (
             <Link to = {`/course/${course.id}`} >
             <img 
               className= {styles["card-img"]} 
-              src={course.image} 
+              src={REACT_APP_API_BASE_URL+course.image} 
               alt={course.title}
             />
               

@@ -2,6 +2,8 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 
 
+const REACT_APP_API_BASE_URL = 'https://react-project-backend-tu2g.onrender.com';
+
 const SearchResults = () => {
     const location = useLocation();
     const { results } = location.state || {}; // Cursos encontrados
@@ -19,7 +21,7 @@ const SearchResults = () => {
               <h3>{course.title}</h3>
               <p>{course.description || 'No description available'}</p>
               <img
-                src={course.image || 'https://via.placeholder.com/150'}
+                src={REACT_APP_API_BASE_URL+course.image}
                 alt={course.title}
                 style={{ width: '150px', height: 'auto' }}
               />

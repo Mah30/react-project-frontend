@@ -5,6 +5,9 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 
+const REACT_APP_API_BASE_URL = 'https://react-project-backend-tu2g.onrender.com';
+
+
 const CourseDetails = () => {
     const [course, setCourses] = useState({})
     const [loading, setLoading] = useState(true);
@@ -41,7 +44,7 @@ const CourseDetails = () => {
 
                     <img
                     className= {styles["card-img"]} 
-                    src = {course.image}
+                    src = {REACT_APP_API_BASE_URL+course.image}
                     /* style={{ width: "100%", maxWidth: "400px" }}  */
                     />
 
