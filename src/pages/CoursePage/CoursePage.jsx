@@ -17,8 +17,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 
 
-
-const API_URL = 'https://react-project-backend-tu2g.onrender.com'; //url to the backend
+const REACT_APP_API_BASE_URL = 'https://react-project-backend-tu2g.onrender.com';
 
 
 const CoursePage = ({isHomepage, isUserSpace}) => {
@@ -30,7 +29,7 @@ const CoursePage = ({isHomepage, isUserSpace}) => {
 
 const fetchCourses = async () => {    
     try{
-        const response = await fetch (`${API_URL}/courses`);
+        const response = await fetch (`${REACT_APP_API_BASE_URL}/courses`);
         if(response.ok) {
             const data = await response.json();
             setCourses(data);//atualiza o estado com os cursos
@@ -87,7 +86,7 @@ return (
             <Link to = {`/course/${course.id}`} >
             <img 
               className= {styles["card-img"]} 
-              src={course.image || "API_URL/generate-image"} 
+              src={course.image || "REACT_APP_API_BASE_URL/generate-image"} 
               alt={course.title}
             />
               

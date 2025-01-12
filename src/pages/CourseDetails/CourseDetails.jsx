@@ -14,7 +14,7 @@ const CourseDetails = () => {
 
 
     useEffect(() => {
-        fetch(`API_URL/courses/${courseId}`)
+        fetch(`process.env.REACT_APP_API_BASE_URL/courses/${courseId}`)
         .then((response) => response.json())
         .then((data) => {
             setCourses(data);

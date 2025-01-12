@@ -24,7 +24,7 @@ const Login  = () => {
         try {
             // Busca o usuário pelo email e senha
             const response = await fetch(
-              `API_URL/login?email=${email}&password=${password}`
+              `process.env.REACT_APP_API_BASE_URL/login?email=${email}&password=${password}`
             );
             const user = await response.json();
       

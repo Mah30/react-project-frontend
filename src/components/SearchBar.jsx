@@ -7,8 +7,6 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-const API_URL = 'https://react-project-backend-tu2g.onrender.com';
-
 // Search button
 
 const SearchBar = () => {
@@ -21,7 +19,7 @@ const SearchBar = () => {
 
     const handleSearchSubmit = async () => {
       try {
-        const response = await fetch(`${API_URL}/courses?q=${search}`); // Busca cursos com base no termo
+        const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/courses?q=${search}`); // Busca cursos com base no termo
         if (response.ok) {
           const results = await response.json();
           if (results.length > 0) {
