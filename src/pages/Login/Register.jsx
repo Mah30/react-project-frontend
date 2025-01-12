@@ -24,7 +24,7 @@ const Register = () => {
 
     try {
       // Checa se o email j tá registrado
-      const response = await fetch(`process.env.REACT_APP_API_BASE_URL/register?email=${email}`);
+      const response = await fetch(`https://react-project-backend-tu2g.onrender.com/register?email=${email}`);
       const existingUsers = await response.json();
 
       if (existingUsers.length > 0) {
@@ -36,7 +36,7 @@ const Register = () => {
 
 
       // REgistrta novo usuario
-      const registerResponse = await fetch('process.env.REACT_APP_API_BASE_URL/register', {
+      const registerResponse = await fetch('https://react-project-backend-tu2g.onrender.com/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json', 

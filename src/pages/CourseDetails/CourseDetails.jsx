@@ -14,7 +14,7 @@ const CourseDetails = () => {
 
 
     useEffect(() => {
-        fetch(`process.env.REACT_APP_API_BASE_URL/courses/${courseId}`)
+        fetch(`https://react-project-backend-tu2g.onrender.com/courses/${courseId}`)
         .then((response) => response.json())
         .then((data) => {
             setCourses(data);

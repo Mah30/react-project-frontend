@@ -24,7 +24,7 @@ const Login  = () => {
         try {
             // Busca o usuário pelo email e senha
             const response = await fetch(
-              `process.env.REACT_APP_API_BASE_URL/login?email=${email}&password=${password}`
+              `https://react-project-backend-tu2g.onrender.com/login?email=${email}&password=${password}`
             );
             const user = await response.json();
       

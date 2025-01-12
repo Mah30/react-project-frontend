@@ -19,7 +19,7 @@ const SearchBar = () => {
 
     const handleSearchSubmit = async () => {
       try {
-        const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/courses?q=${search}`); // Busca cursos com base no termo
+        const response = await fetch(`${REACT_APP_API_BASE_URL}/courses?q=${search}`); // Busca cursos com base no termo
         if (response.ok) {
           const results = await response.json();
           if (results.length > 0) {
