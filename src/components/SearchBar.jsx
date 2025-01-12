@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-const API_URL = 'http://localhost:4000';
+const API_URL = 'https://react-project-backend-tu2g.onrender.com';
 
 // Search button
 

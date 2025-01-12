@@ -24,7 +24,7 @@ const Login  = () => {
         try {
             // Busca o usuário pelo email e senha
             const response = await fetch(
-              `http://localhost:4000/login?email=${email}&password=${password}`
+              `API_URL/login?email=${email}&password=${password}`
             );
             const user = await response.json();
       

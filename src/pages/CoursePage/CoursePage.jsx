@@ -18,7 +18,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 
 
-const API_URL = 'http://localhost:4000'; //url to the backend
+const API_URL = 'https://react-project-backend-tu2g.onrender.com'; //url to the backend
 
 
 const CoursePage = ({isHomepage, isUserSpace}) => {
@@ -87,7 +87,7 @@ return (
             <Link to = {`/course/${course.id}`} >
             <img 
               className= {styles["card-img"]} 
-              src={course.image || "http://localhost:4000/generate-image"} 
+              src={course.image || "API_URL/generate-image"} 
               alt={course.title}
             />
               

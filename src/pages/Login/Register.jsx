@@ -24,7 +24,7 @@ const Register = () => {
 
     try {
       // Checa se o email j tá registrado
-      const response = await fetch(`http://localhost:4000/register?email=${email}`);
+      const response = await fetch(`API_URL/register?email=${email}`);
       const existingUsers = await response.json();
 
       if (existingUsers.length > 0) {
@@ -36,7 +36,7 @@ const Register = () => {
 
 
       // REgistrta novo usuario
-      const registerResponse = await fetch('http://localhost:4000/register', {
+      const registerResponse = await fetch('API_URL/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json', 

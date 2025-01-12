@@ -7,7 +7,7 @@ const PurchasePage = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch(`http://localhost:4000/courses/${courseId}`)
+        fetch(`API_URL/courses/${courseId}`)
         .then((response) => response.json())
         .then((data) => {
           setCourse(data);
