@@ -1,0 +1,106 @@
+.container {
+    padding: 1.5rem;
+    max-width: 768px;
+    margin: 0 auto;
+    color: #333;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #16425b;
+    margin-bottom: 1.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #16425b;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .paragraph {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  .list {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .aboutSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .profileImage {
+    width: 112px;
+    height: 112px;
+    border-radius: 9999px;
+    object-fit: cover;
+    margin-top: -320px ;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (min-width: 768px) {
+    .aboutSection {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  
+  .socialLinks {
+    margin-top: 1.5rem;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .linkedinButton {
+    background-color: #2563eb;
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .linkedinButton:hover {
+    background-color: #1e40af;
+  }
+  
+  .githubButton {
+    background-color: #111827;
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .githubButton:hover {
+    background-color: #374151;
+  }
+  
+  .backHome {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .backHome a {
+    color: #2563eb;
+    font-size: 0.875rem;
+    text-decoration: underline;
+  }
+  

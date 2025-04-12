@@ -1,6 +1,5 @@
-import styles from './Sidebar.module.css';
+
 import * as React from 'react';
-import { useMediaQuery, useTheme } from '@mui/material';//responsividade
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
@@ -22,10 +21,7 @@ import { Link } from 'react-router-dom';
 //AnchorTemporaryDrawer
 
 function Sidebar({state, setState, toggleDrawer}) {
-  /* const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm')); */ //Responsividade (mudar isso)
   
-
   const list = (anchor) => (
     <Box
       sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}

@@ -46,7 +46,7 @@ function Navbar() {
     >
       <AppBar 
       position="static"
-      sx = {{backgroundColor: '#003049'}}>
+      sx = {{backgroundColor: '#415e8e'}}>
         <Toolbar
         sx={{
           display: "flex",
@@ -85,7 +85,7 @@ function Navbar() {
               variant="h6" 
               component="div" 
               sx={{ flexGrow: 1 }}>    
-            M'ART's Courses
+            M&lsquo;ART&lsquo;s Courses
           </Typography>
 
           <Box sx={{ display: 'flex', gap: 2 }}>
@@ -100,15 +100,6 @@ function Navbar() {
             Home
           </Button>
 
-          <Button 
-          className={styles.changeColor}
-          color="inherit" 
-          component={Link} 
-          to="/aboutpage"
-          sx = {{textTransform: 'Capitalize'}}
-          >
-            About
-          </Button>
 
           <Button 
           className={styles.changeColor}
@@ -120,27 +111,15 @@ function Navbar() {
             Courses
           </Button>
 
-          <Button
-          className={styles.changeColor}
-          color="inherit" 
-          component={Link} 
-          to="/new"
-          sx = {{textTransform: 'Capitalize'}}
-          >
-            New
-          </Button>
-          
           <Button 
           className={styles.changeColor}
           color="inherit" 
           component={Link} 
-          to="/talktous"
+          to="/aboutpage"
           sx = {{textTransform: 'Capitalize'}}
           >
-            Contact
+            About
           </Button>
-
-
 
           <Button
             color="primary"
