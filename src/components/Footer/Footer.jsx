@@ -1,6 +1,8 @@
-import React from 'react';
+
 import styles from './Footer.module.css';
 import {FaFacebook, FaInstagram, FaLinkedin} from 'react-icons/fa';
+
+
 
 const Footer = () => {
     return (
@@ -10,7 +12,7 @@ const Footer = () => {
             
             <ul className={styles.social_list}>
                 <li>
-                    <FaFacebook /> 
+                    <FaFacebook/>
                 </li>
                 <li>
                     <FaInstagram /> 
@@ -25,7 +27,10 @@ const Footer = () => {
 
 
             <p>Developed by Mariah.       Find this source on {""}
-                <a href="https://github.com/Mah30/react-project-frontend" target='_blank'>
+                <a 
+                href="https://github.com/Mah30/react-project-frontend" 
+                target='_blank'
+                className={styles.link_color}>
                     
                         GitHub! 
 

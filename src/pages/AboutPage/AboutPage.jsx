@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./AboutPage.module.css";
 import profilePic from "../../assets/images/MariahLinkedin.png";
-import { NavLink } from "react-router-dom";
+/* import { NavLink } from "react-router-dom"; */
 
 
 const AboutPage = () => {
@@ -44,11 +44,23 @@ const AboutPage = () => {
 
           <h2 className={styles.subtitle}>⚙️ Tech Stack</h2>
           <ul className={styles.list}>
-            <li><strong>Frontend:</strong> React (Hooks), React Router, CSS Modules, Tailwind CSS</li>
-            <li><strong>Backend:</strong> Custom API with JSON Server, Express, Sharp, and file handling</li>
-            <li><strong>Database:</strong> JSON file-based mock DB</li>
-            <li><strong>Auth & Security:</strong> (Not implemented in this project)</li>
-            <li><strong>Dev Tools:</strong> Nodemon, Git & GitHub, dotenv, morgan</li>
+            <li>
+              <strong>Frontend:</strong>React (Hooks, Context API) • TypeScript • React Router • Tailwind CSS • CSS Modules • Flowbite React • Vite
+            </li>
+            <li>
+              <strong>Backend:</strong> Express.js (TypeScript) • Implement RESTful APIs • MongoDB • PostgreSQL
+              
+            </li>
+            <li>
+              <strong>Database:</strong>  MongoDB • PostgreSQL (Prisma ORM) 
+            </li>
+            <li>
+              <strong>Auth & Security:</strong> (Not implemented in this project)
+            </li>
+            <li>
+              <strong>Dev Tools:</strong> Prisma • Nodemon • dotenv • Morgan • Git & GitHub •
+              ESLint & Prettier  • Thunder Client (for API testing) . VSCode • Netlify • Vercel
+            </li>
           </ul>
 
           <div className={styles.socialLinks}>
@@ -56,7 +68,7 @@ const AboutPage = () => {
             <div className={styles.buttonGroup}>
               <a
                 href="https://www.linkedin.com/in/mariahgraumann-fullstackwebdeveloper/"
-                /* target="_blank" */
+                target="_blank"
                 rel="noopener noreferrer"
                 className={styles.linkedinButton}
               >
@@ -64,7 +76,7 @@ const AboutPage = () => {
               </a>
               <a
                 href="https://github.com/Mah30"
-                /* target="_blank" */
+                target="_blank"               
                 rel="noopener noreferrer"
                 className={styles.githubButton}
               >
